@@ -60,6 +60,17 @@
             <img src="img/poster6.jpg" alt="">
         </div>
     </div>
+
+    <script>
+        // mouse scroll horizontal 
+        const element = document.querySelector(".container");
+        element.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            element.scrollBy({
+                left: event.deltaY < 0 ? -30 : 30,
+            });
+        });
+    </script>
 </body>
 
 </html>
